@@ -75,8 +75,7 @@ for(let i = 0; i<users.length;i++){
     //Since there is a large quantity of data to parse through and it may clip, we can utalize javascripts overflow handler to fix this issue
     //This code handles when the table overflows and declares when to allow scrolling which is set to 150px
     tablecontainer.appendChild(table); 
-    tablecontainer.style.overflowY = "scroll"; 
-    tablecontainer.style.height = "150px"; 
+    
     
     
 
