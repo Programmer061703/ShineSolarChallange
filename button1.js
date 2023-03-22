@@ -34,8 +34,8 @@ This function will be responsible for clearing the table by using the .innerHTML
 Then the function calls 
 ********************/
 function clearTable(){
-    tablecontainer.innerHTML = '';
-    tablecontainer.appendChild(table);  
+// To Finish 
+    
 
 }
 
@@ -45,7 +45,7 @@ function displayAll(){
 fetch('db.json')
 .then(response => response.json())
 .then(data => {
-const users = data.users; 
+    const users = data.users; 
 //itterates through the length of the JSON data
 for(let i = 0; i<users.length;i++){
 
