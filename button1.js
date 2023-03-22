@@ -9,10 +9,10 @@ let type_Lname = document.createElement('th');
 let type_Email = document.createElement('th'); 
 
 //Appends the values to their respective variable names
-type_ID.appendChild('ID');
-type_Fname.appendChild('First Name');
-type_Lname.appendChild('Last Name');
-type_Email.appendChild('Email');
+type_ID.textContent = 'ID';
+type_Fname.textContent = 'First Name';
+type_Lname.textContent = 'Last Name';
+type_Email.textContent = 'Email';
 
 //Appends the variables to the headerrow
 headerRow.appendChild(type_ID);
@@ -45,8 +45,9 @@ function displayAll(){
 fetch('db.json')
 .then(response => response.json())
 .then(data => {
+const users = data.users; 
 //itterates through the length of the JSON data
-for(let i = 0; i<data.length;i++){
+for(let i = 0; i<users.length;i++){
 
     /*******************
      Very simmaler to previous code, but it is responsible for creating a row in the table, then adding the data to the row
@@ -55,13 +56,13 @@ for(let i = 0; i<data.length;i++){
     let row = document.createElement('tr');
     let value_ID = document.createElement('td');
     let value_FName = document.createElement('td');
-    let value_LName = documemnt.createElement('td');
+    let value_LName = document.createElement('td');
     let value_Email = document.createElement('td');
 
-    value_ID.textContent = data[i].id; 
-    value_FName.textContent = data[i].firstName;
-    value_LName.textContent = data[i].lastName;
-    value_Email.textContent = data[i].email; 
+    value_ID.textContent = users[i].id; 
+    value_FName.textContent = users[i].firstName;
+    value_LName.textContent = users[i].lastName;
+    value_Email.textContent = users[i].email; 
 
     row.appendChild(value_ID);
     row.appendChild(value_FName);
@@ -69,25 +70,27 @@ for(let i = 0; i<data.length;i++){
     row.appendChild(value_Email);
 
     table.appendChild(row); 
-
+     
+}
     //Since there is a large quantity of data to parse through and it may clip, we can utalize javascripts overflow handler to fix this issue
     //This code handles when the table overflows and declares when to allow scrolling which is set to 150px
+    tablecontainer.appendChild(table); 
     tablecontainer.style.overflowY = "scroll"; 
     tablecontainer.style.height = "150px"; 
-
-
-}
-
-})
-
+    
     
 
+
+
+
+});
 
 }
 
 let button = document.getElementById('button_display'); // assignes the variable button to the element ID button_display from the HTML 
 //This section of code creates a listener for when the button is clicked then runs the two functions clearTable(); and displayAll;
 button.addEventListener('click',()=>{
+    console.log("Button clicked!");
     clearTable();
     displayAll();
 })
