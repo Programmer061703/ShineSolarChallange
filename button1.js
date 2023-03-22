@@ -2,6 +2,8 @@ let table = document.createElement('table'); // Creates a table and stores it in
 
 let headerRow = document.createElement('tr'); // Creates a header row and stores it in the variable "headerRow"
 
+
+
 //Code bellow is responsible for createing the header names and storing them in their respective variables 
 let type_ID = document.createElement('th');
 let type_Fname = document.createElement('th');
@@ -34,7 +36,13 @@ This function will be responsible for clearing the table by using the .innerHTML
 Then the function calls 
 ********************/
 function clearTable(){
-// To Finish 
+
+    let tableRows = table.getElementsByTagName('tr'); //Gets all row values with the 'tr' value which is the data cells other than the header
+
+    //This is repsonsible for deleting all rows in the table with tag 'tr' exept the first row which is the header
+    while(tableRows.length > 1){ 
+        tableRows[1].remove(); 
+    }
     
 
 }
@@ -53,28 +61,29 @@ for(let i = 0; i<users.length;i++){
      Very simmaler to previous code, but it is responsible for creating a row in the table, then adding the data to the row
      *******************/
 
+    //declares the necessary variables with their respective HTML tags. This allows specific sections of the table to be modified from the style.css 
     let row = document.createElement('tr');
     let value_ID = document.createElement('td');
     let value_FName = document.createElement('td');
     let value_LName = document.createElement('td');
     let value_Email = document.createElement('td');
 
+    //This code takes the position i from the for loop and accesses the users array to get the 'id','firstName','lastName',and 'email'
     value_ID.textContent = users[i].id; 
     value_FName.textContent = users[i].firstName;
     value_LName.textContent = users[i].lastName;
     value_Email.textContent = users[i].email; 
-
+    //This code appends the values to the row the for loop is currently on 
     row.appendChild(value_ID);
     row.appendChild(value_FName);
     row.appendChild(value_LName);
     row.appendChild(value_Email);
 
-    table.appendChild(row); 
+    table.appendChild(row);  // This appends the rows (which contain the values) to the table 
      
 }
-    //Since there is a large quantity of data to parse through and it may clip, we can utalize javascripts overflow handler to fix this issue
-    //This code handles when the table overflows and declares when to allow scrolling which is set to 150px
-    tablecontainer.appendChild(table); 
+    
+    tablecontainer.appendChild(table); //this appends the table from above to the HTML table container 
     
     
     
@@ -87,9 +96,13 @@ for(let i = 0; i<users.length;i++){
 }
 
 let button = document.getElementById('button_display'); // assignes the variable button to the element ID button_display from the HTML 
+ 
 //This section of code creates a listener for when the button is clicked then runs the two functions clearTable(); and displayAll;
 button.addEventListener('click',()=>{
     console.log("Button clicked!");
     clearTable();
+    console.log("Table Cleared");
     displayAll();
+    
+    console.log("Table Displayed");
 })
