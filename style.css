@@ -1,16 +1,21 @@
 body{
   background-color: #f2f2f2;
+  overflow:auto; 
 }
 
 table {
     font-family: Arial, sans-serif;
     font-size: 14px;
     background-color: #f2f2f2;
+    border-collapse: collapse;
+    
   }
   
   th, td {
     padding: 8px;
     text-align: left;
+    width: 180px;
+    
   }
   
   th {
@@ -18,11 +23,16 @@ table {
     color: white;
     position: sticky;
     top: 0;
+
   }
 
 #table {
-  height: 150px;
+  height: 400px;
   overflow-y: scroll; 
+  position: absolute;
+  right: 30px;
+  top: 30px; 
+
 }
 #button_display{
   background-color: #2485E1;
@@ -32,14 +42,24 @@ table {
   padding: 8px 55px;
   border:#2485E1;
   transition-duration: 0.4s;
+  position: absolute;
+  top: 150px;
+  left: 200px;
 }
 #button_display:hover{
   background-color: #4498e6; 
   color: white;
+  
 }
 #box{
   background-color: #F5F6F7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   
-
+  width: 1400px ;
+  height: 400px;
+  position: sticky; 
+  margin-left: auto;
+  margin-right: auto;
+  
+  
 }
