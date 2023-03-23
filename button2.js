@@ -1,6 +1,6 @@
-let table2 = document.createElement('table2'); // Creates a table and stores it in the variable "table"
+let table2 = document.createElement('table2'); // Creates a table and stores it in the variable "table2"
 
-let headerRow2 = document.createElement('tr'); // Creates a header row and stores it in the variable "headerRow"
+let headerRow2 = document.createElement('tr'); // Creates a header row and stores it in the variable "headerRow2"
 
 
 
@@ -16,24 +16,23 @@ type_Price.textContent = 'Price';
 type_Product.textContent = 'Product';
 type_Status.textContent = 'Status';
 
-//Appends the variables to the headerrow
+//Appends the variables to the headerrow2
 headerRow2.appendChild(type_uID);
 headerRow2.appendChild(type_Price);
 headerRow2.appendChild(type_Product);
 headerRow2.appendChild(type_Status);
 
-//Appends the headerRow to the table variable
+//Appends the headerRow2 to the table2 variable
 
 table2.appendChild(headerRow2);
 
-//Appends the table to the HTML table Container called "table"
+//Appends the table to the HTML table Container called "table2"
 let tablecontainer2 = document.getElementById('table2');
 tablecontainer2.appendChild(table2);
 
 
 /******************* 
-This function will be responsible for clearing the table by using the .innerHTML command which reads the contents of the  then sets them to empty
-Then the function calls 
+This function is responsible for clearing the table by using the .innerHTML command which reads the contents of the table2 then sets them to empty 
 ********************/
 function clearTable2(){
 
@@ -47,9 +46,7 @@ function clearTable2(){
 
 }
 
-
-
-//this function is responsible for displaying all information from the JSON file to the table 
+//this function is responsible for displaying the orders information from the JSON file to the table 
 function displayAll2(){
 fetch('db.json')
 .then(response => response.json())
@@ -58,10 +55,6 @@ fetch('db.json')
 //itterates through the length of the JSON data
 for(let i = 0; i<orders.length;i++){
 
-    /*******************
-     Very simmaler to previous code, but it is responsible for creating a row in the table, then adding the data to the row
-     *******************/
-
     //declares the necessary variables with their respective HTML tags. This allows specific sections of the table to be modified from the style.css 
     let row2 = document.createElement('tr');
     let value_userID = document.createElement('td');
@@ -69,7 +62,7 @@ for(let i = 0; i<orders.length;i++){
     let value_Prodcut = document.createElement('td');
     let value_Status = document.createElement('td');
 
-    //This code takes the position i from the for loop and accesses the users array to get the 'id','firstName','lastName',and 'email'
+    //This code takes the position i from the for loop and accesses the orders array to get the 'userId','price','product',and 'status'
     value_userID.textContent = orders[i].userId; 
     value_Price.textContent = orders[i].price;
     value_Prodcut.textContent = orders[i].product;
@@ -99,9 +92,9 @@ for(let i = 0; i<orders.length;i++){
 
 
 let button2 = document.getElementById('button2_display'); // assignes the variable button to the element ID button_display from the HTML 
-let button3 = document.getElementById('button3_display');
+
  
-//This section of code creates a listener for when the button is clicked then runs the two functions clearTable(); and displayAll;
+//This section of code creates a listener for when the button is clicked then runs the two functions clearTable2(); and displayAll2();
 button2.addEventListener('click',()=>{
     console.log("Button clicked!");
     clearTable2();
