@@ -17,14 +17,14 @@ table,table2,table3 {
     padding: 8px;
     text-align: left;
     width: 190px;
-    background-color: #edeff0; 
+    background-color: #e5e7e8; 
   }
 
   tr:hover td  {
-    background-color: #2485E1;
+    background-color: #edeff0;
   }
   tr:hover th{
-    background-color: #2485E1;
+    background-color: #edeff0;
   }
   
   
@@ -33,7 +33,7 @@ table,table2,table3 {
     text-align: left;
     width: 190px;
     font-weight: bold;
-    background-color: #edeff0;
+    background-color: #e5e7e8;
     top: 0px;
   }
 
