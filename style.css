@@ -3,7 +3,7 @@ body{
   overflow:auto; 
 }
 
-table {
+table,table2,table3 {
     font-family: Arial, sans-serif;
     font-size: 14px;
     
@@ -49,16 +49,18 @@ table {
   
   
 
-#table {
-  height: 150px;
+#table,#table2,#table3 {
+  height: 400px;
   overflow-y: scroll; 
   position: absolute;
-  right: 30px;
-  top: 30px; 
+  right: 0px;
+  top: 0px; 
  
 
 }
-#button_display{
+
+
+#button_display,#button2_display,#button3_display{
   background-color: #2485E1;
   color: white; 
   border-radius: 8px;
@@ -73,9 +75,13 @@ table {
 #button_display:hover{
   background-color: #4498e6; 
   color: white;
-  
 }
-#box{
+#button2_display:hover{
+  background-color: #4498e6; 
+  color: white;
+}
+
+#box,#box2,#box3{
   background-color: #F5F6F7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 1400px ;
@@ -83,4 +89,12 @@ table {
   position: sticky; 
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
 }
+
+
+table2::-webkit-scrollbar{
+  width: 30px;
+}
+
+
