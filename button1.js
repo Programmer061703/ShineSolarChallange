@@ -11,7 +11,7 @@ let type_Lname = document.createElement('th');
 let type_Email = document.createElement('th'); 
 
 //Appends the values to their respective variable names
-type_ID.textContent = 'ID';
+type_ID.textContent = 'Id';
 type_Fname.textContent = 'First Name';
 type_Lname.textContent = 'Last Name';
 type_Email.textContent = 'Email';

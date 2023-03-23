@@ -4,19 +4,20 @@ body{
 }
 
 table,table2,table3 {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color:#425563;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 5px;
    
   }
  
    td {
     padding: 8px;
     text-align: left;
-    width: 180px;
-    background-color: #bec7cd; 
+    width: 190px;
+    background-color: #edeff0; 
   }
 
   tr:hover td  {
@@ -30,9 +31,9 @@ table,table2,table3 {
   th {
     padding: 8px;
     text-align: left;
-    width: 180px;
-    font-weight: normal;
-    background-color: #bec7cd;
+    width: 190px;
+    font-weight: bold;
+    background-color: #edeff0;
     top: 0px;
   }
 
@@ -50,7 +51,7 @@ table,table2,table3 {
   
 
 #table,#table2,#table3 {
-  height: 400px;
+  height: 300px;
   overflow-y: scroll; 
   position: absolute;
   right: 0px;
@@ -64,10 +65,9 @@ table,table2,table3 {
   background-color: #2485E1;
   color: white; 
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px 55px;
   border:#2485E1;
-  transition-duration: 0.4s;
   position: absolute;
   top: 150px;
   left: 200px;
@@ -80,18 +80,53 @@ table,table2,table3 {
   background-color: #4498e6; 
   color: white;
 }
+#button3_display:hover{
+  background-color: #4498e6; 
+  color: white;
+}
 
 #box,#box2,#box3{
   background-color: #F5F6F7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 1400px ;
-  height: 400px;
+  width: 1500px ;
+  height: 300px;
   position: sticky; 
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  
+}
+#box::before{
+  content: "1.Clicking this button will return all the users from the server.";
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #425563;
 }
 
+#box2::before{
+  content: "2.Clicking this button will return all the orders from the server.";
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #425563;
+}
+#box3::before{
+  content: "3.Clicking this button will return ONLY the orders from Jane Doe";
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #425563;
+}
 
 
 
