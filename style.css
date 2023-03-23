@@ -5,9 +5,9 @@ body{
 
 table,table2,table3 {
     font-family:sans-serif;
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: bold;
-    color:#425563;
+    color:#5a6c79;
     border-collapse: separate;
     border-spacing: 0 5px;
    
@@ -88,6 +88,7 @@ table,table2,table3 {
 #box,#box2,#box3{
   background-color: #F5F6F7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
   width: 1500px ;
   height: 300px;
   position: sticky; 
@@ -101,10 +102,10 @@ table,table2,table3 {
   position: absolute;
   top: -15px;
   left: 0px;
-  font-size: 10px;
+  font-family:sans-serif;
+  font-size: 9.5px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #425563;
+  color:#5a6c79;
 }
 
 #box2::before{
@@ -112,20 +113,20 @@ table,table2,table3 {
   position: absolute;
   top: -15px;
   left: 0px;
-  font-size: 10px;
+  font-family:sans-serif;
+  font-size: 9.5px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #425563;
+  color:#5a6c79;
 }
 #box3::before{
   content: "3.Clicking this button will return ONLY the orders from Jane Doe";
   position: absolute;
   top: -15px;
   left: 0px;
-  font-size: 10px;
+  font-family:sans-serif;
+  font-size: 9.5px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #425563;
+  color:#5a6c79;
 }
 
 
